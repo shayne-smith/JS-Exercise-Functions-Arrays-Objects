@@ -171,8 +171,18 @@ function appleIndex(array) {
  * passing in [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ] as the argument,
  * the returned value should be: [ false, true, false, false, true, false ].
 */
-function isItAnApple(/* code here */) {
+function isItAnApple(array) {
   /* code here */
+  const newArray = [];
+  for (let i = 0; i < array.length; i++){
+    if (array[i] === 'apple'){
+      newArray[i] = true;
+    } else {
+      newArray[i] = false;
+    }
+  }
+
+  return newArray;
 }
 
 
@@ -231,6 +241,8 @@ function get3rdCar(inventory) {
 */
 function getCarInfoByIndex(inventory, index) {
   /* code here */
+  const carByIndex = inventory[index];
+  return `The is a ${carByIndex.car_make} ${carByIndex.car_model}`;
 }
 
 /**
@@ -244,8 +256,10 @@ function getCarInfoByIndex(inventory, index) {
  * For example, if getLastCarInfo is invoked passing the inventory inside /data/inventory.js,
  * it will return `This is a Lincoln Town Car`.
 */
-function getLastCarInfo(/* code here */) {
+function getLastCarInfo(inventory) {
   /* code here */
+  const carByIndex = inventory[inventory.length - 1];
+  return `This is a ${carByIndex.car_make} ${carByIndex.car_model}`;
 }
 
 /**
