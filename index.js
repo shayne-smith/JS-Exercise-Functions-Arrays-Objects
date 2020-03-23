@@ -76,8 +76,13 @@ function temperatureCtoF(celsius) {
  * 
  * Hint: You can call your `temperatureCtoF` function from inside `temperatureInF`.
 */
-function temperatureInF(/* code here */) {
+function temperatureInF(t, scale) {
   /* code here */
+  if (scale === 'F') {
+    return t + 'F';
+  } else if (scale === 'C') {
+    return Math.round(t * (9/5) + 32) + 'F';
+  }
 }
 
 
